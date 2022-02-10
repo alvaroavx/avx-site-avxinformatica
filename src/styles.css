@@ -1,5 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
-
+/* FUENTES */
+@font-face {
+    font-family: metropolis-thin-italic;
+    src: url(assets/fuentes/metropolis/Metropolis-ThinItalic.otf) format("opentype");
+}
+@font-face {
+    font-family: metropolis-light;
+    src: url(assets/fuentes/metropolis/Metropolis-Light.otf) format("opentype");
+}
+@font-face {
+    font-family: metropolis-bold;
+    src: url(assets/fuentes/metropolis/Metropolis-Bold.otf) format("opentype");
+}
+/* PROPIEDADES GENERALES */
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
+    background: black;
 }
+ul {
+    margin: 0;
+    padding: 0;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+/* MEDIA QUERIES */
+/* mobile devices */
+@media (max-width: 480px) {}
+/* tablets */
+@media (max-width: 768px) {}
+/* small screens */
+@media (max-width: 1024px) {}
+/* desktops */
+@media (max-width: 1200px) {}
+/* extra large screens */
+@media (min-width: 1201px) {}

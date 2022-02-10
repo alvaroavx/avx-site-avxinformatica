@@ -1,10 +1,55 @@
 
-#root {
-    background-color: black;
+#banner {
     width: 100%;
     height: 100%;
+    background: #0D0E12 url(../assets/fondos/fondo-blanco.png) no-repeat fixed center;
+    background-size: 100% 100%;
     position: absolute;
 }
+
+/* MENU PRINCIPAL */
+#menu {
+    width: 100%;
+    margin-top: 20px;
+}
+#menu ul {
+    list-style: none;
+    display: table;
+    width: 100%;
+    padding: 0 100px;
+}
+#menu ul li {
+    color: white;
+    font-family: 'metropolis-light';
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    width: 150px;
+}
+#menu ul li a {
+    /*color: inherit;
+    text-decoration: none;*/
+}
+#menu ul li a:hover,
+#menu ul li a:focus {
+    color: black;
+    font-family: 'metropolis-bold';
+    animation: glow 1s ease-in-out infinite alternate;
+}
+#menu ul li a:active {
+    color: #A8C5E5;
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #7de9ff, 0 0 15px #7de9ff, 0 0 20px #7de9ff, 0 0 25px #7de9ff, 0 0 30px #7de9ff, 0 0 35px #7de9ff;
+    }
+    to {
+        text-shadow: 0 0 10px #A8C5E5, 0 0 15px #A8C5E5, 0 0 20px #A8C5E5, 0 0 25px #A8C5E5, 0 0 30px #A8C5E5, 0 0 35px #A8C5E5, 0 0 40px #A8C5E5;
+    }
+}
+
+/* LOGO */
 #logo {
     height: 100%;
     width: 100%;
@@ -13,7 +58,72 @@
     justify-content: center;
 }
 #logo img {
-    width: 400px;
-    min-width: 320px;
-    max-width: 400px;
+    /*min-width: 320px;*/
+    max-width: 300px;
+}
+
+/* mobile devices */
+@media (max-width: 480px) {
+    #logo img {
+        max-width: 150px;
+    }
+}
+/* tablets */
+@media (max-width: 768px) {
+    #logo img {
+        max-width: 200px;
+    }
+}
+/* small screens */
+@media (max-width: 1024px) {
+    #logo img {
+        max-width: 250px;
+    }
+}
+/* desktops */
+@media (max-width: 1200px) {}
+/* extra large screens */
+@media (min-width: 1201px) {}
+
+#introduccion {
+
+}
+#introduccion .wrapper {
+    margin: 40px auto;
+    max-width: 500px;
+    padding: 40px;
+    background-color: rgba(55,55,54,0.5);
+    border-radius: 50px;
+    /*border: 1px solid rgb(125,233,255);*/
+}
+#introduccion .wrapper p {
+    font-family: 'metropolis-thin-italic';
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+#calltoaction .wrapper {
+    margin: 40px 0;
+    text-align: center;
+}
+#calltoaction .wrapper button {
+    animation: glow 1s ease-in-out infinite alternate;
+
+}
+#calltoaction .wrapper button a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    border: 1px solid white;
+    padding: 20px;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'metropolis-light';
+}
+#calltoaction .wrapper button a:hover,
+#calltoaction .wrapper button a:focus { 
+    animation: glow 1s ease-in-out infinite alternate;
+    color: black;
+    font-family: 'metropolis-bold';
 }
