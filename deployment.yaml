@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avx-site-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        label-key : label-value  
+    spec:
+      containers:
+        - name: avx-site-pod
+          image: avx/avx-site:v1
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
