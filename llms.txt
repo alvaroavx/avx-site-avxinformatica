@@ -1,0 +1,15 @@
+# AVX Informática Angular
+
+> Contexto compacto; la documentación canónica está en README.md y docs/.
+
+- Prototipo histórico en Angular 13.
+- Entrada: main.ts -> AppModule -> AppComponent.
+- Implementa solo el banner inicial.
+- Menú y CTA apuntan a secciones ausentes; router sin rutas.
+- Assets locales: fondo, logos y fuentes Metropolis.
+- Sin API, persistencia, formularios, CMS, auth o analítica.
+- Docker construye con Node 17.6 y sirve con Nginx 1.15.
+- deployment.yaml es incompleto y no prueba un despliegue.
+- Una prueba heredada busca `.content span` inexistente.
+- Hay un cambio preexistente en yarn.lock que debe preservarse.
+- Índice: docs/README.md.

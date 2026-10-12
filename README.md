@@ -1,30 +1,45 @@
-# avx-site-avxinformatica
-Aplicación Angular para el sitio de AVX Informatica
+# AVX Informática — prototipo Angular
 
-# AvxSite
+Segundo intento histórico del sitio corporativo de AVX Informática, desarrollado con Angular 13. El repositorio implementa el banner inicial: navegación, logotipo, propuesta de valor y un llamado a conocer servicios.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+El menú anticipa servicios, portafolio, partners, testimonios y contacto, pero esas secciones no están implementadas. Este repositorio tampoco acredita una publicación vigente; el sitio AVX activo vive en otro proyecto.
 
-## Development server
+## Estado funcional
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+| Área | Estado comprobado |
+| --- | --- |
+| Banner de portada | Implementado en `AppComponent` |
+| Logo, fondo y Metropolis | Incluidos en `src/assets/` |
+| Menú y CTA | Renderizados, pero apuntan a IDs ausentes |
+| Rutas Angular | Módulo existente con arreglo vacío |
+| Componentes adicionales | No existen |
+| API, datos, formularios, CMS | No existen |
+| Contenedor | Docker multi-stage Node/Nginx |
+| Kubernetes | Deployment incompleto; no incluye selector ni Service |
+| Pruebas | Dos expectativas válidas y una heredada obsoleta |
 
-## Code scaffolding
+## Uso local
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+npm ci
+npm start
+npm test -- --watch=false --browsers=ChromeHeadless
+npm run build
+```
 
-## Build
+El servidor usa normalmente `http://localhost:4200`. El build produce `dist/avx-site/`; el Dockerfile fuerza `dist/out/` dentro de la imagen.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Mapa rápido
 
-## Running unit tests
+- `src/app/app.component.*`: toda la interfaz visible.
+- `src/app/app-routing.module.ts`: router sin rutas.
+- `src/styles.css`: fuentes y estilos globales.
+- `src/assets/`: fondo, logos y familia Metropolis.
+- `angular.json`: build, test y presupuestos.
+- `Dockerfile`, `nginx-custom.conf`: construcción y servicio estático.
+- `deployment.yaml`: borrador de Deployment Kubernetes.
+- [`docs/README.md`](docs/README.md): documentación técnica.
+- [`AGENTS.md`](AGENTS.md): reglas para agentes.
+- [`llms.txt`](llms.txt): contexto compacto para IA.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Documentación revisada desde código, configuración e historial Git el 12 de octubre de 2026. El cambio preexistente de `yarn.lock` no forma parte de esta revisión documental.
